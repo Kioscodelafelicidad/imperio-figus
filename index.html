@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiosco - Imperio de Figuritas 2026</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 0; padding: 20px; color: #333; padding-bottom: 110px; }
+        header { text-align: center; padding: 25px 20px; background-color: #7a1c4b; color: white; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h1 { margin: 0; font-size: 26px; letter-spacing: 1px; }
+        header p { margin: 5px 0 0 0; font-size: 14px; opacity: 0.9; }
+        
+        .cartel-promo { background-color: #fef9e7; border: 2px dashed #f39c12; border-radius: 8px; padding: 15px; text-align: center; margin-bottom: 20px; }
+        .cartel-promo h3 { margin: 0 0 5px 0; color: #d35400; font-size: 16px; }
+        .cartel-promo p { margin: 0; font-size: 14px; color: #555; font-weight: bold; }
+
+        .sector { background: white; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 3px 6px rgba(0,0,0,0.08); overflow: hidden; }
+        .sector-header { padding: 20px; color: white; font-size: 40px; text-align: center; font-weight: bold; }
+        
+        .bg-olimpio { background: linear-gradient(135deg, #d4af37, #aa800f); }
+        .bg-fwc { background: linear-gradient(135deg, #00a896, #028090); }
+        .bg-formaciones-fwc { background: linear-gradient(135deg, #e67e22, #d35400); }
+        .bg-extra { background: linear-gradient(135deg, #8e44ad, #4a148c); }
+        .bg-argentina { background: linear-gradient(135deg, #75aadb, #3a7bd5); }
+        .bg-top { background: linear-gradient(135deg, #34495e, #2c3e50); }
+        .bg-formaciones-comunes { background: linear-gradient(135deg, #27ae60, #1e824c); }
+        .bg-escudos { background: linear-gradient(135deg, #1f4068, #162447); }
+        .bg-dificiles { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+        .bg-comunes { background: linear-gradient(135deg, #7f8c8d, #95a5a6); }
+
+        .sector-contenido { padding: 15px; }
+        .sector-olimpio { border-top: 6px solid #d4af37; } 
+        .sector-fwc { border-top: 6px solid #00a896; } 
+        .sector-formaciones-fwc { border-top: 6px solid #e67e22; }
+        .sector-extra { border-top: 6px solid #8e44ad; }
+        .sector-argentina { border-top: 6px solid #75aadb; } 
+        .sector-top { border-top: 6px solid #34495e; }
+        .sector-formaciones-comunes { border-top: 6px solid #27ae60; }
+        .sector-escudos { border-top: 6px solid #1f4068; }
+        .sector-dificiles { border-top: 6px solid #e74c3c; }
+        .sector-comunes { border-top: 6px solid #7f8c8d; }
+        
+        h2 { margin: 0 0 5px 0; font-size: 18px; color: #2c3e50; display: flex; align-items: center; gap: 8px; }
+        .precio { font-weight: bold; color: #27ae60; margin: 0 0 15px 0; font-size: 15px; }
+        .precio-variable { font-size: 13px; color: #7f8c8d; font-weight: normal; margin-top: 2px; }
+        
+        .sub-sector { background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 6px; padding: 12px; margin-bottom: 12px; }
+        .sub-titulo { font-size: 15px; font-weight: bold; color: #4a148c; margin: 0 0 10px 0; }
+
+        .grid-figus { display: flex; flex-wrap: wrap; gap: 8px; }
+        .figu-btn { 
+            background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; 
+            padding: 10px 14px; cursor: pointer; font-weight: bold; font-size: 14px;
+            transition: all 0.2s; min-width: 65px; text-align: center;
+        }
+        .figu-btn:hover { background: #f1f5f9; border-color: #94a3b8; }
+        .figu-btn.seleccionada { background: #27ae60; color: white; border-color: #219653; box-shadow: 0 2px 4px rgba(39,174,96,0.3); }
+        
+        textarea { width: 100%; height: 80px; border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px; font-size: 14px; resize: none; box-sizing: border-box; }
+
+        .btn-whatsapp {
+            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+            background: #25d366; color: white; width: 90%; max-width: 400px;
+            padding: 15px; border-radius: 50px; text-decoration: none; font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25); display: flex; align-items: center; justify-content: center; gap: 10px;
+            font-size: 16px; border: none; cursor: pointer; z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🏆 El Imperio de las Figuritas 2026 🏆</h1>
+        <p>Seleccioná tus faltantes y reservalas por WhatsApp</p>
+    </header>
+
+    <div class="cartel-promo">
+        <h3>🤝 ¡PRECIOS CHARLABLES Y DESCUENTOS!</h3>
+        <p>Todo es negociable. ¡Si llevás en cantidad, te armo un buen descuento en el total de tu compra! 😉</p>
+    </div>
+
+    <!-- 1. SECTOR OLIMPIO -->
+    <div class="sector sector-olimpio">
+        <div class="sector-header bg-olimpio">👑✨</div>
+        <div class="sector-contenido">
+            <h2>✨ Sector Olimpo (Cracks y Joyas)</h2>
+            <p class="precio">Precios individuales en cada botón</p>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('Messi (Olimpo)', 40000)">🐐 Messi ($40k)</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Haaland (Olimpo)', 15000)">🇳🇴 Haaland ($15k)</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Lamine Yamal (Olimpo)', 15000)">🇪🇸 Yamal ($15k)</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Dembele (Olimpo)', 8000)">🇫🇷 Dembélé ($8k)</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Pedri (Olimpo)', 8000)">🇪🇸 Pedri ($8k)</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Vinicius Jr (Olimpo)', 8000)">🇧🇷 Vinícius ($8k)</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo Arg (ARG 1)', 10000)">🛡️ ARG 1 Escudo ($10k)</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Arg (ARG 13)', 10000)">📋 ARG 13 Formación ($10k)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. SECTOR FWC -->
+    <div class="sector sector-fwc">
+        <div class="sector-header bg-fwc">🏆🌍</div>
+        <div class="sector-contenido">
+            <h2>🌍 Sector FWC (Logos y Especiales)</h2>
+            <p class="precio">Precio: $20.000 c/u</p>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('FWC 1', 20000)">FWC 1</button>
+                <button class="figu-btn" onclick="seleccionarFigu('FWC 2', 20000)">FWC 2</button>
+                <button class="figu-btn" onclick="seleccionarFigu('FWC 3', 20000)">FWC 3</button>
+                <button class="figu-btn" onclick="seleccionarFigu('FWC 5', 20000)">FWC 5</button>
+                <button class="figu-btn" onclick="seleccionarFigu('FWC 6', 20000)">FWC 6</button>
+                <button class="figu-btn" onclick="seleccionarFigu('FWC 7', 20000)">FWC 7</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. SECTOR FWC FORMACIONES -->
+    <div class="sector sector-formaciones-fwc">
+        <div class="sector-header bg-formaciones-fwc">📋⚽</div>
+        <div class="sector-contenido">
+            <h2>📋 Sector FWC Formaciones</h2>
+            <p class="precio">Precio: $20.000 c/u</p>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('FWC Formación 9', 20000)">FWC 9</button>
+                <button class="figu-btn" onclick="seleccionarFigu('FWC Formación 10', 20000)">FWC 10</button>
+                <button class="figu-btn" onclick="seleccionarFigu('FWC Formación 11', 20000)">FWC 11</button>
+                <button class="figu-btn" onclick="seleccionarFigu('FWC Formación 12', 20000)">FWC 12</button>
+                <button class="figu-btn" onclick="seleccionarFigu('FWC Formación 13', 20000)">FWC 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('FWC Formación 14', 20000)">FWC 14</button>
+                <button class="figu-btn" onclick="seleccionarFigu('FWC Formación 16', 20000)">FWC 16</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. SECTOR EXTRA STICKERS -->
+    <div class="sector sector-extra">
+        <div class="sector-header bg-extra">✨💎</div>
+        <div class="sector-contenido">
+            <h2>✨ Sector Extra Stickers</h2>
+            <p class="precio">Ediciones Especiales fuera de serie</p>
+            <div class="sub-sector">
+                <div class="sub-titulo">⚪ Versión Base ($15.000 c/u)</div>
+                <div class="grid-figus">
+                    <button class="figu-btn" onclick="seleccionarFigu('Extra Son (Base)', 15000)">🇰🇷 Heungmin Son</button>
+                    <button class="figu-btn" onclick="seleccionarFigu('Extra Salah (Base)', 15000)">🇪🇬 Salah</button>
+                </div>
+            </div>
+            <div class="sub-sector">
+                <div class="sub-titulo">🟫 Versión Bronce ($20.000 c/u)</div>
+                <div class="grid-figus">
+                    <button class="figu-btn" onclick="seleccionarFigu('Extra Davies (Bronce)', 20000)">🇨🇦 Davies</button>
+                    <button class="figu-btn" onclick="seleccionarFigu('Extra Caicedo (Bronce)', 20000)">🇪🇨 Caicedo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. SECTOR LA ESCALONETA -->
+    <div class="sector sector-argentina">
+        <div class="sector-header bg-argentina">🇦🇷⚽</div>
+        <div class="sector-contenido">
+            <h2>🇦🇷 Sector La Escaloneta (Selección Argentina)</h2>
+            <p class="precio">Precio: $8.000 c/u</p>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('Argentina 4', 8000)">ARG 4</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Argentina 5', 8000)">ARG 5</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Argentina 7', 8000)">ARG 7</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Argentina 9', 8000)">ARG 9</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Argentina 11', 8000)">ARG 11</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Argentina 12', 8000)">ARG 12</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Argentina 14', 8000)">ARG 14</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Argentina 16', 8000)">ARG 16</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Argentina 18', 8000)">ARG 18</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Argentina 20', 8000)">ARG 20</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. SECTOR JUGADORES TOP/CONOCIDOS (NUEVO SECTOR) -->
+    <div class="sector sector-top">
+        <div class="sector-header bg-top">⭐🏃‍♂️</div>
+        <div class="sector-contenido">
+            <h2>⭐ Jugadores Conocidos / Selecciones Top</h2>
+            <p class="precio">Precio: $2.000 c/u <span class="precio-variable">(Francia, Brasil, Inglaterra, etc.)</span></p>
+            <div class="grid-figus">
+                <!-- Acá podés cambiar el texto interno o agregar los nombres que quieras más adelante -->
+                <button class="figu-btn" onclick="seleccionarFigu('Top Francia (Ejemplo)', 2000)">🇫🇷 Crack Francia</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Top Brasil (Ejemplo)', 2000)">🇧🇷 Crack Brasil</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Top Inglaterra (Ejemplo)', 2000)">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Crack Inglaterra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. SECTOR FORMACIONES DE PAÍSES -->
+    <div class="sector sector-formaciones-comunes">
+        <div class="sector-header bg-formaciones-comunes">📋🌱</div>
+        <div class="sector-contenido">
+            <h2>📋 Formaciones N° 13 (Comunes)</h2>
+            <p class="precio">Precio: $2.000 c/u</p>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('Formación España 13', 2000)">🇪🇸 ESP 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Marruecos 13', 2000)">🇲🇦 MAR 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Portugal 13', 2000)">🇵🇹 POR 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Bélgica 13', 2000)">🇧🇪 BEL 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Jordania 13', 2000)">🇯🇴 JOR 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Corea 13', 2000)">🇰🇷 KOR 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Arabia 13', 2000)">🇸🇦 KSA 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Turquía 13', 2000)">🇹🇷 TUR 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Senegal 13', 2000)">🇸🇳 SEN 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Colombia 13', 2000)">🇨🇴 COL 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Irán 13', 2000)">🇮🇷 IRN 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Túnez 13', 2000)">🇹🇳 TUN 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Noruega 13', 2000)">🇳🇴 NOR 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Alemania 13', 2000)">🇩🇪 GER 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Cabo Verde 13', 2000)">🇨🇻 CPV 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Suiza 13', 2000)">🇨🇭 SUI 13</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Formación Japón 13', 2000)">🇯🇵 JPN 13</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. SECTOR ESCUDOS MUNDIALES -->
+    <div class="sector sector-escudos">
+        <div class="sector-header bg-escudos">🛡️🌍</div>
+        <div class="sector-contenido">
+            <h2>🛡️ Escudos Mundiales disponibles</h2>
+            <p class="precio">Precio: $4.000 c/u</p>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo BIH', 4000)">🛡️ BIH</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo POR', 4000)">🛡️ POR</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo ENG', 4000)">🛡️ ENG</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo COL', 4000)">🛡️ COL</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo FRA', 4000)">🛡️ FRA</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo BEL', 4000)">🛡️ BEL</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo CRO', 4000)">🛡️ CRO</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo TUR', 4000)">🛡️ TUR</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo MEX', 4000)">🛡️ MEX</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo SEN', 4000)">🛡️ SEN</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo HAI', 4000)">🛡️ HAI</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo SCO', 4000)">🛡️ SCO</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo TUN', 4000)">🛡️ TUN</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo PAR', 4000)">🛡️ PAR</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo SUI', 4000)">🛡️ SUI</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo JOR', 4000)">🛡️ JOR</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo ALG', 4000)">🛡️ ALG</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo UZB', 4000)">🛡️ UZB</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo PAN', 4000)">🛡️ PAN</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo CUW', 4000)">🛡️ CUW</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo AUS', 4000)">🛡️ AUS</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo IRN', 4000)">🛡️ IRN</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo ALE', 4000)">🛡️ ALE</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo NED', 4000)">🛡️ NED</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo IRQ', 4000)">🛡️ IRQ</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo SWE', 4000)">🛡️ SWE</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo COD', 4000)">🛡️ COD</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo NOR', 4000)">🛡️ NOR</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo ECU', 4000)">🛡️ ECU</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escudo CIV', 4000)">🛡️ CIV</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. SECTOR JUGADORES DIFICILES -->
+    <div class="sector sector-dificiles">
+        <div class="sector-header bg-dificiles">🚨⚽</div>
+        <div class="sector-contenido">
+            <h2>🚨 Difíciles Nivel Máximo</h2>
+            <p class="precio">Precio: $4.000 c/u</p>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('España 7', 4000)">🇪🇸 ESP 7</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Uruguay 4', 4000)">🇺🇾 URU 4</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Uruguay 10', 4000)">🇺🇾 URU 10</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Turquía 14', 4000)">🇹🇷 TUR 14</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Brasil 2', 4000)">🇧🇷 BRAS 2</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 3', 4000)">🇳🇱 NED 3</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Colombia 14', 4000)">🇨🇴 COL 14</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Francia 14', 4000)">🇫🇷 FRA 14</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Bélgica 2', 4000)">🇧🇪 BEL 2</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Bélgica 16', 4000)">🇧🇪 BEL 16</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Alemania 15', 4000)">🇩🇪 GER 15</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Inglaterra 2', 4000)">🏴󠁧󠁢󠁥󠁮󠁧󠁿 ENG 2</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Inglaterra 11', 4000)">🏴󠁧󠁢󠁥󠁮󠁧󠁿 ENG 11</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Inglaterra 17', 4000)">🏴󠁧󠁢󠁥󠁮󠁧󠁿 ENG 17</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Inglaterra 18', 4000)">🏴󠁧󠁢󠁥󠁮󠁧󠁿 ENG 18</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Suecia 19', 4000)">🇸🇪 SWE 19</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Suecia 20', 4000)">🇸🇪 SWE 20</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 10. SECTOR COMUNES INTELIGENTE -->
+    <div class="sector sector-comunes">
+        <div class="sector-header bg-comunes">🌍🃏</div>
+        <div class="sector-contenido">
+            <h2>🌍 Comunes Países Random</h2>
+            <p class="precio">Precio: $500 c/u</p>
+            <p style="margin: 0 0 10px 0; font-size: 14px; font-weight: bold; color: #555;">Pegá o escribí acá abajo la lista de números comunes de $500 que te falten:</p>
+            <textarea id="lista-comunes" placeholder="Ejemplo: España 3, 5, 8. México 14. Qatar 2..."></textarea>
+        </div>
+    </div>
+
+    <button class="btn-whatsapp" onclick="enviarPedido()">
+        💬 Enviar Pedido ($<span id="total-carrito">0</span>)
+    </button>
+
+    <script>
+        let carrito = [];
+        let total = 0;
+
+        function seleccionarFigu(nombre, precio) {
+            const index = carrito.findIndex(item => item.nombre === nombre);
+            const boton = event.target;
+
+            if (index > -1) {
+                carrito.splice(index, 1);
+                boton.classList.remove('seleccionada');
+                total -= precio;
+            } else {
+                carrito.push({ nombre, precio });
+                boton.classList.add('seleccionada');
+                total += precio;
+            }
+            document.getElementById('total-carrito').innerText = total;
+        }
+
+        function enviarPedido() {
+            let textoComunes = document.getElementById('lista-comunes').value.trim();
+
+            if (carrito.length === 0 && textoComunes === "") {
+                alert("¡Primero selecciona figuritas o escribe tu lista de comunes!");
+                return;
+            }
+
+            let mensaje = "Hola Tomás! Te paso mi pedido de figuritas:\n\n";
+            
+            if(carrito.length > 0) {
+                mensaje += "*🔥 SELECCIÓN VIP:*\n";
+                carrito.forEach(item => {
+                    mensaje += `• ${item.nombre} ($${item.precio})\n`;
+                });
+            }
+            
+            if(textoComunes !== "") {
+                mensaje += `\n*🌍 LISTA DE COMUNES ($500 c/u):*\n${textoComunes}\n`;
+            }
+            
+            mensaje += `\n💰 *Total estimado en botones: $${total}*`;
+            mensaje += "\n_(Las de $500 se suman al total en el mostrador)_";
+            mensaje += "\n\n¿Tenés stock disponible para pasar a retirar por el kiosco?";
+
+            let telefonoKiosco = "5491164814528"; 
+            let url = `https://wa.me/${telefonoKiosco}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
