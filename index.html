@@ -42,11 +42,8 @@
         
         h2 { margin: 0 0 5px 0; font-size: 18px; color: #2c3e50; display: flex; align-items: center; gap: 8px; }
         .precio { font-weight: bold; color: #27ae60; margin: 0 0 15px 0; font-size: 15px; }
-        .precio-variable { font-size: 13px; color: #7f8c8d; font-weight: normal; margin-top: 2px; }
         
-        .sub-sector { background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 6px; padding: 12px; margin-bottom: 12px; }
-        .sub-titulo { font-size: 15px; font-weight: bold; color: #4a148c; margin: 0 0 10px 0; }
-
+        .sub-pais-top { font-weight: bold; color: #2c3e50; margin: 12px 0 6px 0; font-size: 14px; display: flex; align-items: center; gap: 6px; }
         .grid-figus { display: flex; flex-wrap: wrap; gap: 8px; }
         .figu-btn { 
             background: #fff; border: 1px solid #cbd5e1; border-radius: 6px; 
@@ -158,7 +155,7 @@
 
     <!-- 5. SECTOR LA ESCALONETA -->
     <div class="sector sector-argentina">
-        <div class="sector-header bg-argentina">🇦🇷⚽</div>
+        <div class="sector-header bg-android bg-argentina">🇦🇷⚽</div>
         <div class="sector-contenido">
             <h2>🇦🇷 Sector La Escaloneta (Selección Argentina)</h2>
             <p class="precio">Precio: $8.000 c/u</p>
@@ -177,17 +174,143 @@
         </div>
     </div>
 
-    <!-- 6. SECTOR JUGADORES TOP/CONOCIDOS (NUEVO SECTOR) -->
+    <!-- 6. SECTOR JUGADORES TOP/CONOCIDOS (CORRECCIÓN TOTAL) -->
     <div class="sector sector-top">
         <div class="sector-header bg-top">⭐🏃‍♂️</div>
         <div class="sector-contenido">
             <h2>⭐ Jugadores Conocidos / Selecciones Top</h2>
-            <p class="precio">Precio: $2.000 c/u <span class="precio-variable">(Francia, Brasil, Inglaterra, etc.)</span></p>
+            <p class="precio">Precio: $2.000 c/u</p>
+            
+            <div class="sub-pais-top">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra (ENG)</div>
             <div class="grid-figus">
-                <!-- Acá podés cambiar el texto interno o agregar los nombres que quieras más adelante -->
-                <button class="figu-btn" onclick="seleccionarFigu('Top Francia (Ejemplo)', 2000)">🇫🇷 Crack Francia</button>
-                <button class="figu-btn" onclick="seleccionarFigu('Top Brasil (Ejemplo)', 2000)">🇧🇷 Crack Brasil</button>
-                <button class="figu-btn" onclick="seleccionarFigu('Top Inglaterra (Ejemplo)', 2000)">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Crack Inglaterra</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Inglaterra 3', 2000)">ENG 3</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Inglaterra 6', 2000)">ENG 6</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Inglaterra 7', 2000)">ENG 7</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Inglaterra 10', 2000)">ENG 10</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Inglaterra 15', 2000)">ENG 15</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Inglaterra 16', 2000)">ENG 16</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Inglaterra 19', 2000)">ENG 19</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Inglaterra 20', 2000)">ENG 20</button>
+            </div>
+
+            <div class="sub-pais-top">🇩🇪 Alemania (GER)</div>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('Alemania 2', 2000)">GER 2</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Alemania 3', 2000)">GER 3</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Alemania 10', 2000)">GER 10</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Alemania 14', 2000)">GER 14</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Alemania 16', 2000)">GER 16</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Alemania 17', 2000)">GER 17</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Alemania 18', 2000)">GER 18</button>
+            </div>
+
+            <div class="sub-pais-top">🇧🇷 Brasil (BRA)</div>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('Brasil 5', 2000)">BRA 5</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Brasil 8', 2000)">BRA 8</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Brasil 9', 2000)">BRA 9</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Brasil 11', 2000)">BRA 11</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Brasil 12', 2000)">BRA 12</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Brasil 16', 2000)">BRA 16</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Brasil 17', 2000)">BRA 17</button>
+            </div>
+
+            <div class="sub-pais-top">🇫🇷 Francia (FRA)</div>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('Francia 2', 2000)">FRA 2</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Francia 3', 2000)">FRA 3</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Francia 6', 2000)">FRA 6</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Francia 10', 2000)">FRA 10</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Francia 11', 2000)">FRA 11</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Francia 16', 2000)">FRA 16</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Francia 18', 2000)">FRA 18</button>
+            </div>
+
+            <div class="sub-pais-top">🇵🇹 Portugal (POR)</div>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('Portugal 2', 2000)">POR 2</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Portugal 5', 2000)">POR 5</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Portugal 6', 2000)">POR 6</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Portugal 7', 2000)">POR 7</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Portugal 9', 2000)">POR 9</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Portugal 14', 2000)">POR 14</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Portugal 17', 2000)">POR 17</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Portugal 18', 2000)">POR 18</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Portugal 19', 2000)">POR 19</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Portugal 20', 2000)">POR 20</button>
+            </div>
+
+            <div class="sub-pais-top">🇪🇸 España (ESP)</div>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('España 2', 2000)">ESP 2</button>
+                <button class="figu-btn" onclick="seleccionarFigu('España 3', 2000)">ESP 3</button>
+                <button class="figu-btn" onclick="seleccionarFigu('España 4', 2000)">ESP 4</button>
+                <button class="figu-btn" onclick="seleccionarFigu('España 5', 2000)">ESP 5</button>
+                <button class="figu-btn" onclick="seleccionarFigu('España 6', 2000)">ESP 6</button>
+                <button class="figu-btn" onclick="seleccionarFigu('España 8', 2000)">ESP 8</button>
+                <button class="figu-btn" onclick="seleccionarFigu('España 9', 2000)">ESP 9</button>
+                <button class="figu-btn" onclick="seleccionarFigu('España 12', 2000)">ESP 12</button>
+                <button class="figu-btn" onclick="seleccionarFigu('España 14', 2000)">ESP 14</button>
+                <button class="figu-btn" onclick="seleccionarFigu('España 16', 2000)">ESP 16</button>
+                <button class="figu-btn" onclick="seleccionarFigu('España 17', 2000)">ESP 17</button>
+            </div>
+
+            <div class="sub-pais-top">🇳🇱 Países Bajos (NED)</div>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 2', 2000)">NED 2</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 4', 2000)">NED 4</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 5', 2000)">NED 5</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 6', 2000)">NED 6</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 7', 2000)">NED 7</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 8', 2000)">NED 8</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 10', 2000)">NED 10</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 11', 2000)">NED 11</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 14', 2000)">NED 14</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 15', 2000)">NED 15</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 17', 2000)">NED 17</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 19', 2000)">NED 19</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Países Bajos 20', 2000)">NED 20</button>
+            </div>
+
+            <div class="sub-pais-top">🇸🇪 Suecia (SWE)</div>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('Suecia 6', 2000)">SWE 6</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Suecia 16', 2000)">SWE 16</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Suecia 17', 2000)">SWE 17</button>
+            </div>
+
+            <div class="sub-pais-top">Otros Países ($2.000 c/u)</div>
+            <div class="grid-figus">
+                <button class="figu-btn" onclick="seleccionarFigu('Uruguay 5', 2000)">🇺🇾 URU 5</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Uruguay 14', 2000)">🇺🇾 URU 14</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Uruguay 17', 2000)">🇺🇾 URU 17</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Croacia 2', 2000)">🇭🇷 CRO 2</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Croacia 5', 2000)">🇭🇷 CRO 5</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Croacia 10', 2000)">🇭🇷 CRO 10</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Croacia 15', 2000)">🇭🇷 CRO 15</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Marruecos 2', 2000)">🇲🇦 MAR 2</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Marruecos 4', 2000)">🇲🇦 MAR 4</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Marruecos 11', 2000)">🇲🇦 MAR 11</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Marruecos 19', 2000)">🇲🇦 MAR 19</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Austria 4', 2000)">🇦🇹 AUT 4</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Austria 11', 2000)">🇦🇹 AUT 11</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Austria 12', 2000)">🇦🇹 AUT 12</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Ecuador 4', 2000)">🇪🇨 ECU 4</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Ecuador 9', 2000)">🇪🇨 ECU 9</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Suiza 2', 2000)">🇨🇭 SUI 2</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Suiza 4', 2000)">🇨🇭 SUI 4</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Suiza 10', 2000)">🇨🇭 SUI 10</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Senegal 2', 2000)">🇸🇳 SEN 2</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Senegal 15', 2000)">🇸🇳 SEN 15</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Ghana 10', 2000)">🇬🇭 GHA 10</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Ghana 15', 2000)">🇬🇭 GHA 15</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Uzbekistán 9', 2000)">🇺🇿 UZB 9</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Bosnia 18', 2000)">🇧🇦 BIH 18</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Escocia 6', 2000)">🏴󠁧󠁢󠁳󠁣󠁴󠁿 SCO 6</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Canadá 20', 2000)">🇨🇦 CAN 20</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Corea 18', 2000)">🇰🇷 KOR 18</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Noruega 16', 2000)">🇳🇴 NOR 16</button>
+                <button class="figu-btn" onclick="seleccionarFigu('Bélgica 15', 2000)">🇧🇪 BEL 15</button>
             </div>
         </div>
     </div>
